@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/adskiyponchik/ForMe/programming/Projects/Cpp/Informatik/build",
+  "command": "/usr/bin/clang++   -g -o CMakeFiles/Informatik.dir/main.cpp.o -c /home/adskiyponchik/ForMe/programming/Projects/Cpp/Informatik/main.cpp",
+  "file": "/home/adskiyponchik/ForMe/programming/Projects/Cpp/Informatik/main.cpp",
+  "output": "CMakeFiles/Informatik.dir/main.cpp.o"
+}
+]
