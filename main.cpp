@@ -1,7 +1,11 @@
+// Lottery.cpp
 #include <iostream>
+#include <ctime>
+#include "5_prime_number.h"
 
-int main(int argc, char** argv)
-{
-    std::cout << "Hello World" << std::endl;
+const int SIZE = 10;
+
+int main() {
+    std::cout << isPrimeNumber(1000000000000000) << std::endl;
     return 0;
 }
