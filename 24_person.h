@@ -1,7 +1,6 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-using namespace std;
 
 //----------------------- class declaration -------------------------
 class Person
@@ -10,10 +9,12 @@ class Person
 	friend class Staff;	
 
 private: 
-	// TODO: attributs
+	std::string name;
+	int yearOfBirth;
 
 public: 
-	virtual string toString() = NULL;  // virtual --> late binding 
+	Person(std::string n, int y):name(n), yearOfBirth(y){};
+	virtual std::string toString() = 0;  // virtual --> late binding 
 
 };
 
@@ -22,29 +23,26 @@ class Student: public Person
 {
 private:
 
-	// TODO: attribut
-
+	std::string course;
 public:
-
-	// TODO: signaturs for constructor and toString
-
+	Student(std::string n, int y, std::string c);
+	std::string toString();
 };
 
 //---------------------- Definition/Implementation of Methods -------
 // complete Constructor
-Student::Student(string n, int y, string course)
+Student::Student(std::string n, int y, std::string c):Person(n, y), course(c)
 { 
-	// TODO
+	 // Initialization is done in the initializer list
 
 }
 
 // returns a "nice" string consisting of attributes
-string Student::toString()
+std::string Student::toString()
 {  
-	stringstream s;
-	// s << ...        // complete code line with the attributes
-
-	return s.str();    // convert stream s into a string
+	std::stringstream s;
+    s << "Name: " << name << ", Year of Birth: " << yearOfBirth << ", Course: " << course;
+    return s.str();    // convert stream s into a string
 }
 
 //----------------------- class declaration -------------------------
@@ -52,27 +50,26 @@ class Staff: public Person
 {
 private:
 
-	// TODO: attribut
+	std::string payment;
 
 public:
 
-	// TODO: signaturs for constructor and toString
+	Staff(std::string n, int y, std::string p);
+	std::string toString();
 
 };
 
 //---------------------- Definition/Implementation of Methods -------
 // complete Constructor
-Staff::Staff(string n, int y, string payment)
-{ 
-	// TODO
-
-}
+Staff::Staff(std::string n, int y, std::string p): Person(n, y), payment(p){};
 
 // returns a "nice" string consisting of attributes
-string Staff::toString()
+std::string Staff::toString()
 {  
-	stringstream s;
-	// s << ...      // complete code line with the attributes
-	return s.str();  // convert stream s into a string	
+	std::stringstream s;
+    s << "Name: " << name << ", Year of Birth: " << yearOfBirth << ", Payment: " << payment;
+    return s.str();  // convert stream s into a string 
+	return s.str(); 
 
 }
+
