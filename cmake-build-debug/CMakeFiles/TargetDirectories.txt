@@ -1,3 +1,0 @@
-/home/adskiyponchik/ForMe/programming/Projects/Cpp/Informatik/cmake-build-debug/CMakeFiles/Informatik.dir
-/home/adskiyponchik/ForMe/programming/Projects/Cpp/Informatik/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/adskiyponchik/ForMe/programming/Projects/Cpp/Informatik/cmake-build-debug/CMakeFiles/rebuild_cache.dir
